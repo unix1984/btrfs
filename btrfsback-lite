@@ -89,7 +89,6 @@ btrfs subvolume snapshot -r $SUBVOL $BACKUP_DIR_LOCAL/$DATE_CURRENT
 
 echo Delete older snapshot local..
 btrfs subvolume delete $BACKUP_DIR_LOCAL/$LOCAL_DAILY
-#for i in `find $BACKUP_DIR_LOCAL -maxdepth 1 ! -newer $BACKUP_DIR_LOCAL/$LOCAL_DAILY | awk {'print $1'}`; do echo btrfs su de $i ; done
 
 echo Replikation to remote Host $REMOTE_HOST
 
@@ -97,7 +96,6 @@ btrfs send -q $BACKUP_DIR_LOCAL/$DATE_CURRENT | pv | ssh $REMOTE_HOST btrfs rece
 
 echo Delete older snapshot on remote Host $REMOTE_HOST
 ssh $REMOTE_HOST btrfs subvolume delete $BACKUP_DIR_REMOTE/$REMOTE_DAILY
-#for i in `ssh $REMOTE_HOST find $BACKUP_DIR_REMOTE -maxdepth 1 ! -newer $BACKUP_DIR_REMOTE/$REMOTE_DAILY | awk {'print $1'}`; do btrfs su de $i ; done
 
 echo " "
 echo " - LOCAL Backups:"
