@@ -1,6 +1,5 @@
 # btrfsback-lite
 This is a lightweight BTRFS snapshot and replication script.
-Written in bash.
 
 ==================================================================================
 	  
