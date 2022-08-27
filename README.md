@@ -3,7 +3,7 @@ This is a lightweight BTRFS snapshot and replication script.
 
 ==================================================================================
 	  
-![alt text](http://url/to/img.png)
+![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btrfsback-lite.png)
 
 
 Install: 
