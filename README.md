@@ -27,6 +27,11 @@ cp btrfsback-lite/btrfsback-lite /usr/local/sbin/btrfsback-lite
 chmod +x /usr/local/sbin/btrfsback-lite
 ```
 
+**Dependencies:**
+
+```apt install dateutils tree mailutils postfix pv awk```
+
+
 **Example:**
 
 ```btrfsback-lite --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 4 --remote-host 10.5.5.4 --remote-dir /mnt/sdb2/BACKUP/VPS-rootfs/autosnap-test --daily-remote 6```
