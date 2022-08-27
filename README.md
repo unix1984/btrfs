@@ -8,6 +8,8 @@ Just rewrite the correct path in the file and use it.
 	  
 ![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btr-lite.png)
 
+![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btr-email-report.png)
+
 
 Install: 
 
