@@ -1,5 +1,5 @@
 # btrfsback-lite
-This is a lightweight daily only BTRFS snapshot and replication script.
+This is a lightweight BTRFS snapshot and replication script.
 
 ==================================================================================
 	  
