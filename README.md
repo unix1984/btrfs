@@ -6,6 +6,7 @@ Just rewrite the correct path in the file and use it.
 
 The SSH-Key must be copied to the remote host.
 
+Testen on Ubuntu 22.04 and Debian 11.
 ==================================================================================
 	  
 ![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btr-lite.png)
