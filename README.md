@@ -1,8 +1,8 @@
 # btrfsback-lite
 This is a lightweight daily only BTRFS snapshot and replication script.
 
-==========================================================================================================
-	   This is a lightweight daily only BTRFS snapshot and replication script.
+==================================================================================
+	  
 
 
 
@@ -16,8 +16,8 @@ wget -O /usr/local/sbin/btrfsback-lite https://raw.githubusercontent.com/unix198
 
 
 			____ _  _ ____ _  _ ___  _    ____
-			|___  \/  |__| |\/| |__] |    |___ .
-			|___ _/\_ |  | |  | |    |___ |___ .
+			|___  \/  |__| |\/| |__] |    |___ 
+			|___ _/\_ |  | |  | |    |___ |___ 
 
 "btrfsback-lite --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 4 --remote-host 10.5.5.4 --remote-dir /mnt/sdb2/BACKUP/VPS-rootfs/autosnap-test --daily-remote 6"
 
@@ -25,8 +25,8 @@ wget -O /usr/local/sbin/btrfsback-lite https://raw.githubusercontent.com/unix198
 
 
 			____ ____ ____ _  _ ___ ____ ___
-			|    |__/ |  | |\ |  |  |__| |__] .
-			|___ |  \ |__| | \|  |  |  | |__] .
+			|    |__/ |  | |\ |  |  |__| |__] 
+			|___ |  \ |__| | \|  |  |  | |__] 
 
 "0  23  * * *     root   /usr/local/sbin/btrfsback-lite --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 4 --remote-host 10.5.5.4 --remote-dir /mnt/sdb2/BACKUP/VPS-rootfs/autosnap-test --daily-remote 6 > /var/log/btrfsback-lite.log 2>&1"
 
