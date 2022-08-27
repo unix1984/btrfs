@@ -11,25 +11,25 @@ Just rewrite the correct path in the file and use it.
 ![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btr-email-report.png)
 
 
-Install: 
+**Install:**
 
 ```wget -O /usr/local/sbin/btrfsback-lite https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btrfsback-lite && chmod +x /usr/local/sbin/btrfsback-lite```
 
 
 
 
-Example:
+**Example:**
 
 ```btrfsback-lite --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 4 --remote-host 10.5.5.4 --remote-dir /mnt/sdb2/BACKUP/VPS-rootfs/autosnap-test --daily-remote 6```
 
 
 
-cron:
+**cron:**
 
 ```0  23  * * *     root   /usr/local/sbin/btrfsback-lite --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 4 --remote-host 10.5.5.4 --remote-dir /mnt/sdb2/BACKUP/VPS-rootfs/autosnap-test --daily-remote 6 > /var/log/btrfsback-lite.log 2>&1```
 
 
-or
+**or**
 
 ```0  0  * * *     root   /root/autosnaps-btrfsback-lite.sh```
 
