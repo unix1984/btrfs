@@ -1,6 +1,9 @@
 # btrfsback-lite
 This is a lightweight BTRFS snapshot and replication script.
 
+The autosnaps-btrfsback-lite.sh script is used to back up multiple btrfs subvolumes. 
+Just rewrite the correct path in the file and use it.
+
 ==================================================================================
 	  
 ![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btr-lite.png)
@@ -38,3 +41,9 @@ Usage:
  -D, --daily-remote      -Number of remote daily snapshots.
  -h, --help		-This help.```
 ```
+
+
+
+
+
+
