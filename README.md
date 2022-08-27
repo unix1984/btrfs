@@ -4,7 +4,7 @@ Written in bash.
 
 ==================================================================================
 	  
-![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btrfsback-lite.png)
+![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btr-lite.png)
 
 
 Install: 
