@@ -5,6 +5,7 @@ The **autosnaps-btrfsback-lite.sh** script is used to back up multiple btrfs sub
 Just rewrite the correct path in the file and use it.
 
 The SSH-Key must be copied to the remote host.
+The folders (rootfs, LXDs) must also be created.
 <br/>
 <br/>
 Tested on Ubuntu 22.04 and Debian 11
