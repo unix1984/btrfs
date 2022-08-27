@@ -30,11 +30,11 @@ cron:
 
 
 Usage:
--s, --subvol		-Selected BTRFS subvolume for snapshot.
--l, --local-dir		-Location of snapshots.
--d, --daily-local	-Number of local daily snapshots.
--H, --remote-host	-Remote Host IP Address.
--r, --remote-dir	-Remote location of snapshots.
--D, --daily-remote      -Number of remote daily snapshots.
--h, --help		-This help.```
+ -s, --subvol		-Selected BTRFS subvolume for snapshot.
+ -l, --local-dir		-Location of snapshots.
+ -d, --daily-local	-Number of local daily snapshots.
+ -H, --remote-host	-Remote Host IP Address.
+ -r, --remote-dir	-Remote location of snapshots.
+ -D, --daily-remote      -Number of remote daily snapshots.
+ -h, --help		-This help.```
 
