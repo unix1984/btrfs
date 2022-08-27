@@ -11,9 +11,6 @@ The SSH-Key must be copied to the remote host.
 Tested on Ubuntu 22.04 and Debian 11
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
 	  
 ![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btr-lite.png)
 
