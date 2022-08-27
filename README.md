@@ -66,7 +66,7 @@ Usage:
 <br/>
 <br/>
 
-```Buy Me a Coffee```
+```Buy Me a Coffee :-)```
 <br/>
 Thanks!
 <br/>
