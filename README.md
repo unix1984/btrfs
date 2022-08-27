@@ -20,8 +20,12 @@ Tested on Ubuntu 22.04 and Debian 11
 
 ```wget -O /usr/local/sbin/btrfsback-lite https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btrfsback-lite && chmod +x /usr/local/sbin/btrfsback-lite```
 
-
-
+**or**
+```
+git clone https://github.com/unix1984/btrfsback-lite.git
+cp btrfsback-lite/btrfsback-lite /usr/local/sbin/btrfsback-lite
+chmod +x /usr/local/sbin/btrfsback-lite
+```
 
 **Example:**
 
