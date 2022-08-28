@@ -78,7 +78,7 @@ REMOTE_DAILY=$(date -d "${SNAP_COUNT_REMOTE} days ago" +%Y-%m-%d)
 HOSTNAME=$(hostname)
 
 # to E-mail report
-EMAIL="unix@unixit.org"
+EMAIL="user@example.org"
 
 echo =========================================================================
 echo " Backup Started..                                            " `date "+%Y-%m-%d %H:%M:%S"`
