@@ -1,6 +1,20 @@
 #!/bin/bash
 #set -xv
 
+# Check dependencies
+readonly DEPS=("coreutils" "tree" "bsd-mailx" "postfix" "pv" "gawk")
+
+for dep in "${DEPS[@]}"; do
+    if ! dpkg -l |grep "${dep}" &> /dev/null; then
+        echo -e "Package ${dep} wasn't found on your system."
+        dep_exit=1
+    fi
+done
+
+if [[ "${dep_exit}" -eq 1 ]]; then
+    exit 1
+fi
+
 print_help() {
     cat << EOH
 ==========================================================================================================
