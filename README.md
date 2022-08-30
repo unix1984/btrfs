@@ -33,7 +33,7 @@ chmod +x /usr/local/sbin/btrfsback-lite
 
 **Dependencies:**
 
-```apt install dateutils tree bsd-mailx postfix pv awk```
+```apt install coreutils tree bsd-mailx postfix pv awk```
 
 
 **Example:**
