@@ -1,4 +1,5 @@
 #!/bin/bash
+#exec 1> /var/log/btrfsback-lite.log 2>&1
 #set -xv
 
 # Check dependencies
