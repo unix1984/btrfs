@@ -2,7 +2,7 @@
 #set -xv
 
 # Check dependencies
-readonly DEPS=("date" "tree" "mailx" "postfix" "pv" "awk")
+readonly DEPS=("date" "tree" "mail" "postfix" "pv" "awk")
 
 for dep in "${DEPS[@]}"; do
     if ! type -P "${dep}" &> /dev/null; then
