@@ -2,11 +2,11 @@
 #set -xv
 
 # Check dependencies
-readonly DEPS=("coreutils" "tree" "bsd-mailx" "postfix" "pv" "gawk")
+readonly DEPS=("date" "tree" "mailx" "postfix" "pv" "awk")
 
 for dep in "${DEPS[@]}"; do
-    if ! dpkg -l |grep "${dep}" &> /dev/null; then
-        echo -e "Package ${dep} wasn't found on your system. The script has exited."
+    if ! type -P "${dep}" &> /dev/null; then
+        echo -e "Command not found: ${dep}"
         dep_exit=1
     fi
 done
