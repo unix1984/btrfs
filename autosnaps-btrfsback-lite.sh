@@ -25,8 +25,9 @@ echo =========================================================================
 echo " All Backup done.                                " `date "+%Y-%m-%d %H:%M:%S"`
 echo =========================================================================
 
-# Delete empty rows in the log
+# Log file formatting
 sed -i /^$/d /var/log/btrfsback-lite.log
+sed -i 's/directories/BTRFS Subvol/g' /var/log/btrfsback-lite.log
 
 # Send Daily E-mail report
 cat /var/log/btrfsback-lite.log | mail -s "BTRFS Snapshots and Replication daily E-Mail report." -a "From: $HOSTNAME@btrfsback-lite" $EMAIL
