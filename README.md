@@ -60,7 +60,7 @@ Usage:
  -d, --daily-local	-Number of local daily snapshots.
  -H, --remote-host	-Remote Host IP Address.
  -r, --remote-dir	-Remote location of snapshots.
- -D, --daily-remote      -Number of remote daily snapshots.
+ -D, --daily-remote     -Number of remote daily snapshots.
  -h, --help		-This help.
 ```
 
