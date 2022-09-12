@@ -15,7 +15,7 @@ However, it's pretty universal, you just need bash and btrfs.
 <br/>
 <br/>
 	  
-![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btr-lite.png)
+![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/img/btr-lite.png)
 
 ![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/img/Backup-Email-Report.png)
 
