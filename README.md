@@ -17,7 +17,7 @@ However, it's pretty universal, you just need bash and btrfs.
 	  
 ![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btr-lite.png)
 
-![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btr-email-report.png)
+![alt text](https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/img/Backup-Email-Report.png)
 
 
 **Install:**
