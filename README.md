@@ -90,6 +90,8 @@ Btrlb is a mini version that only rotates local snapshots without replication.
 
 ```0  23  * * *     root   /usr/local/sbin/btrlb --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 10 > /var/log/btrlb.log 2>&1```
 <br/>
+<br/>
+<br/>
 During operation:
 ![alt text](https://raw.githubusercontent.com/unix1984/btrfs/main/img/btrlb-operation.png)
 
