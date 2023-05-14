@@ -67,8 +67,5 @@ Usage:
 <br/>
 <br/>
 
-# btrlb
-btrlb is a mini version that only rotates local snapshots without replication.
-
 
 
