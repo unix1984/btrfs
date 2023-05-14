@@ -19,6 +19,11 @@ HOSTNAME=$(hostname)
 /usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container3 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container3 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container3 --daily-remote 15
 /usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container4 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container4 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container4 --daily-remote 15
 /usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container5 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container5 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container5 --daily-remote 15
+/usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container6 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container6 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container6 --daily-remote 15
+/usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container7 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container7 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container7 --daily-remote 15
+/usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container8 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container8 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container8 --daily-remote 15
+/usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container9 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container9 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container9 --daily-remote 15
+/usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container10 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container10 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container10 --daily-remote 15
 
 
 echo =========================================================================
