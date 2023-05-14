@@ -92,7 +92,7 @@ REMOTE_DAILY=$(date -d "${SNAP_COUNT_REMOTE} days ago" +%Y-%m-%d)
 HOSTNAME=$(hostname)
 
 # to E-mail report
-EMAIL="info@unixit.org"
+EMAIL="user@example.org"
 
 echo ========================================================================= | /usr/games/lolcat
 echo " Backup Started..                                            " `date "+%Y-%m-%d %H:%M:%S"` | /usr/games/lolcat
