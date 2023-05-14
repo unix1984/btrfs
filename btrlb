@@ -3,7 +3,7 @@
 #set -xv
 
 # Check dependencies
-readonly DEPS=("date" "tree" "mail" "postfix" "pv" "awk")
+readonly DEPS=("date" "tree" "mail" "postfix" "pv" "awk" "/usr/games/lolcat")
 
 for dep in "${DEPS[@]}"; do
     if ! type -P "${dep}" &> /dev/null; then
