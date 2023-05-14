@@ -30,7 +30,7 @@ print_help() {
 ==========================================================================================================
 This is a lightweight BTRFS local only snapshot script in BASH. v1.0
 ============================================================================================================================================================================
-Install: wget -O /usr/local/sbin/btrlb https://raw.githubusercontent.com/unix1984/btrlb/main/btrlb && chmod +x /usr/local/sbin/btrlb
+Install: wget -O /usr/local/sbin/btrlb https://raw.githubusercontent.com/unix1984/btrfs/main/btrlb && chmod +x /usr/local/sbin/btrlb
 ============================================================================================================================================================================
 			____ _  _ ____ _  _ ___  _    ____
 			|___  \/  |__| |\/| |__] |    |___ .
