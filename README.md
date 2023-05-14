@@ -72,7 +72,7 @@ Usage:
 <br/>
 
 # btrlb
-btrlb is a mini version that only rotates local snapshots without replication.
+Btrlb is a mini version that only rotates local snapshots without replication for rootfs /.
 
 ![alt text](https://raw.githubusercontent.com/unix1984/btrfs/main/img/btrlb-help.png)
 
