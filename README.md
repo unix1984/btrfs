@@ -66,6 +66,8 @@ Usage:
 
 <br/>
 <br/>
+<br/>
+<br/>
 
 # btrlb
 btrlb is a mini version that only rotates local snapshots without replication.
@@ -74,14 +76,8 @@ btrlb is a mini version that only rotates local snapshots without replication.
 
 **Install:**
 
-```wget -O /usr/local/sbin/btrfsback-lite https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btrfsback-lite && chmod +x /usr/local/sbin/btrfsback-lite```
+```wget -O /usr/local/sbin/btrlb https://raw.githubusercontent.com/unix1984/btrfs/main/btrlb && chmod +x /usr/local/sbin/btrlb```
 
-**or**
-```
-git clone https://github.com/unix1984/btrfsback-lite.git
-mv btrfsback-lite/btrfsback-lite /usr/local/sbin/btrfsback-lite
-chmod +x /usr/local/sbin/btrfsback-lite
-```
 
 **Dependencies:**
 
@@ -90,11 +86,11 @@ chmod +x /usr/local/sbin/btrfsback-lite
 
 **Example:**
 
-```btrfsback-lite --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 4 --remote-host 10.5.5.4 --remote-dir /mnt/sdb2/BACKUP/VPS-rootfs/autosnap-test --daily-remote 6```
+```btrlb --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 10```
 
 
 
 **cron:**
 
-```0  23  * * *     root   /usr/local/sbin/btrfsback-lite --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 4 --remote-host 10.5.5.4 --remote-dir /mnt/sdb2/BACKUP/VPS-rootfs/autosnap-test --daily-remote 6 > /var/log/btrfsback-lite.log 2>&1```
+```0  23  * * *     root   /usr/local/sbin/btrlb --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 10 > /var/log/btrlb.log 2>&1```
 
