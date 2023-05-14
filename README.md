@@ -33,7 +33,7 @@ chmod +x /usr/local/sbin/btrfsback-lite
 
 **Dependencies:**
 
-```apt install coreutils tree bsd-mailx postfix pv gawk```
+```apt install coreutils tree bsd-mailx postfix pv gawk lolcat```
 
 
 **Example:**
@@ -70,5 +70,31 @@ Usage:
 # btrlb
 btrlb is a mini version that only rotates local snapshots without replication.
 
-![alt text] https://raw.githubusercontent.com/unix1984/btrfs/main/img/btrlb-help.png
+![alt text](https://raw.githubusercontent.com/unix1984/btrfs/main/img/btrlb-help.png)
+
+**Install:**
+
+```wget -O /usr/local/sbin/btrfsback-lite https://raw.githubusercontent.com/unix1984/btrfsback-lite/main/btrfsback-lite && chmod +x /usr/local/sbin/btrfsback-lite```
+
+**or**
+```
+git clone https://github.com/unix1984/btrfsback-lite.git
+mv btrfsback-lite/btrfsback-lite /usr/local/sbin/btrfsback-lite
+chmod +x /usr/local/sbin/btrfsback-lite
+```
+
+**Dependencies:**
+
+```apt install coreutils tree bsd-mailx postfix pv gawk lolcat```
+
+
+**Example:**
+
+```btrfsback-lite --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 4 --remote-host 10.5.5.4 --remote-dir /mnt/sdb2/BACKUP/VPS-rootfs/autosnap-test --daily-remote 6```
+
+
+
+**cron:**
+
+```0  23  * * *     root   /usr/local/sbin/btrfsback-lite --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 4 --remote-host 10.5.5.4 --remote-dir /mnt/sdb2/BACKUP/VPS-rootfs/autosnap-test --daily-remote 6 > /var/log/btrfsback-lite.log 2>&1```
 
