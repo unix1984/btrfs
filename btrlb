@@ -1,0 +1,118 @@
+#!/bin/bash
+#exec 1> /var/log/btrlb.log 2>&1
+#set -xv
+
+# Check dependencies
+readonly DEPS=("date" "tree" "mail" "postfix" "pv" "awk" "/usr/games/lolcat")
+
+for dep in "${DEPS[@]}"; do
+    if ! type -P "${dep}" &> /dev/null; then
+        echo -e "Command not found: ${dep}"
+        dep_exit=1
+    fi
+done
+
+if [[ "${dep_exit}" -eq 1 ]]; then
+    exit 1
+fi
+
+
+print_help() {
+    /usr/games/lolcat << EOH
+==========================================================================================================
+██████╗ ████████╗██████╗ ██╗     ██████╗ 
+██╔══██╗╚══██╔══╝██╔══██╗██║     ██╔══██╗
+██████╔╝   ██║   ██████╔╝██║     ██████╔╝
+██╔══██╗   ██║   ██╔══██╗██║     ██╔══██╗
+██████╔╝   ██║   ██║  ██║███████╗██████╔╝
+╚═════╝    ╚═╝   ╚═╝  ╚═╝╚══════╝╚═════╝ 
+                                         
+==========================================================================================================
+This is a lightweight BTRFS local only snapshot script in BASH. v1.0
+============================================================================================================================================================================
+Install: wget -O /usr/local/sbin/btrlb https://raw.githubusercontent.com/unix1984/btrlb/main/btrlb && chmod +x /usr/local/sbin/btrlb
+============================================================================================================================================================================
+			____ _  _ ____ _  _ ___  _    ____
+			|___  \/  |__| |\/| |__] |    |___ .
+			|___ _/\_ |  | |  | |    |___ |___ .
+
+btrlb --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 10
+
+============================================================================================================================================================================
+			____ ____ ____ _  _ ___ ____ ___
+			|    |__/ |  | |\ |  |  |__| |__] .
+			|___ |  \ |__| | \|  |  |  | |__] .
+
+0  23  * * *     root   /usr/local/sbin/btrlb --subvol / --local-dir /mnt/sda2/autosnap-test --daily-local 4 > /var/log/btrlb.log 2>&1
+
+=======================================================================================================================================================================================================================================================
+
+    Usage:
+        -s, --subvol		-Selected BTRFS subvolume for snapshot.
+        -l, --local-dir		-Location of snapshots.
+	-d, --daily-local	-Number of local daily snapshots.
+        -h, --help		-This help.
+
+EOH
+}
+
+OPTS="$(getopt -o s:l:H:r:d:D:h -l subvol:,local-dir:,remote-host:,remote-dir:,daily-local:,daily-remote:,help -- "$@")"
+
+eval set -- "$OPTS"
+
+while true; do
+    case $1 in
+        -s|--subvol)
+            SUBVOL="${2}"; shift 2;;
+        -l|--local-dir)
+            BACKUP_DIR_LOCAL="${2}"; shift 2;;
+        -d|--daily-local)
+            SNAP_COUNT_LOCAL="${2}"; shift 2;;
+        -H|--remote-host)
+            REMOTE_HOST="${2}"; shift 2;;
+	-r|--remote-dir)
+            BACKUP_DIR_REMOTE="${2}"; shift 2;;
+        -D|--daily-remote)
+            SNAP_COUNT_REMOTE="${2}"; shift 2;;
+        -h|--help)
+            print_help; exit 0;;
+        --)
+            shift; break;;
+        *)
+            break;;
+    esac
+done
+
+
+DATE_CURRENT=$(date +%Y-%m-%d)
+
+LOCAL_DAILY=$(date -d "${SNAP_COUNT_LOCAL} days ago" +%Y-%m-%d)
+REMOTE_DAILY=$(date -d "${SNAP_COUNT_REMOTE} days ago" +%Y-%m-%d)
+
+HOSTNAME=$(hostname)
+
+# to E-mail report
+EMAIL="info@unixit.org"
+
+echo ========================================================================= | /usr/games/lolcat
+echo " Backup Started..                                            " `date "+%Y-%m-%d %H:%M:%S"` | /usr/games/lolcat
+echo " Subvol:" $SUBVOL | /usr/games/lolcat
+echo ========================================================================= | /usr/games/lolcat
+sync
+btrfs subvolume snapshot -r $SUBVOL $BACKUP_DIR_LOCAL/$DATE_CURRENT
+
+echo Delete older snapshot local..
+btrfs subvolume delete $BACKUP_DIR_LOCAL/$LOCAL_DAILY
+
+echo " "
+echo " - LOCAL Backups:"
+tree -a -d -L 1 $BACKUP_DIR_LOCAL | /usr/games/lolcat
+echo " "
+echo _______________________________________________________________________________________________________________________ 
+echo
+echo " Backup End.                                                        " `date "+%Y-%m-%d %H:%M:%S"`
+echo " "
+echo " "
+
+# Send daily E-mail report
+#cat /var/log/btrlb.log | mail -s "BTRFS Snapshots and Replication daily E-Mail report." -a "From: $HOSTNAME@btrlb" $EMAIL
