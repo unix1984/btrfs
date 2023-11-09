@@ -47,7 +47,7 @@ Daily E-Mail report:
 
 ```0  0  * * *     root   /root/autosnaps-btrfsback-lite.sh```
 
-```
+
 /usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container1 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container1 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container1 --daily-remote 15
 /usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container2 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container2 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container2 --daily-remote 15
 /usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container3 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container3 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container3 --daily-remote 15
@@ -55,8 +55,7 @@ Daily E-Mail report:
 /usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container5 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container5 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container5 --daily-remote 15
 /usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container6 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container6 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container6 --daily-remote 15
 /usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container7 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container7 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container7 --daily-remote 15
-/usr/local/sbin/btrfsback-lite --subvol /mnt/sda3/containers/container8 --local-dir /mnt/sda3/autosnap-btrfsback/daily/container8 --daily-local 10 --remote-host 10.5.5.4 --remote-dir /mnt/rootfs/BACKUP-VPS/LXD/daily/container8 --daily-remote 15
-```
+
 
 
 ```
